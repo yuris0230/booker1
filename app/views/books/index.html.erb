@@ -29,7 +29,7 @@
           <td>
             <%= link_to "Show", book_path(book), class: "btn btn-sm btn-primary" %>
             <%= link_to "Edit", edit_book_path(book), class: "btn btn-sm btn-warning" %>
-            <%= link_to "Delete", book_path(book), method: :delete, data: { confirm: "投稿を削除" }, class: "btn btn-sm btn-danger" %>
+            <%= link_to "Destroy", book_path(book), method: :delete, data: { confirm: "投稿を削除" }, class: "btn btn-sm btn-danger" %>
           </td>
         </tr>
       <% end %>

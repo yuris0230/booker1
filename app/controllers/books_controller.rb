@@ -15,11 +15,11 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      flash[:notice] = "投稿に成功しました。" # flash message
+      flash[:notice] = "Book was successfully created." # flash message
       redirect_to book_path(@book.id) # if true -> book id
     else
       @books = Book.all
-      flash.now[:alert] = "投稿失敗しました。"
+      flash.now[:alert] = "Book creation error."
       render :index # if false -> same form and need to do again
       # redirect_to new_book_path -> this is for redirect
     end
@@ -34,10 +34,10 @@ class BooksController < ApplicationController
     # redirect_to book_path(book.id)
     # need flash message to tell user that user's edit was successfull
     if @book.update(book_params)
-      flash[:notice] = "更新に成功しました。"
+      flash[:notice] = "Book was successfully updated."
       redirect_to book_path(@book.id)
     else
-      flash.now[:alert] = "更新に失敗しました。"
+      flash.now[:alert] = "Book update error."
       render :edit
     end
   end
