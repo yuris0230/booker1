@@ -1,8 +1,13 @@
-<h1>Welcome to Bookers！</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quibusdam. Consequatur nihil harum incidunt ut dolorem praesentium nam veniam inventore a, velit tempore atque. Mollitia aperiam maxime quisquam enim libero.</p>
+<div class="container mt-5">
+    <div class="home text-center">
+      <h1 class="display-4 mb-4">Bookersへようこそ！</h1>
+      <p class="display-6 mb-5">Bookersでは、さまざまな書籍に関するあなたの意見や、印象を共有し交換することができます</p>
 
-<!--- use bootstrap for start botton --->
-<%= link_to "Start", books_path, class: "btn btn-primary" %>
+    <!--- use bootstrap for start botton --->
+    <%= link_to "Start", books_path, class: "btn btn-light" %>
+    </div>
+</div>
+
 <!---
     btn btn-{syntax..} [bottons]
     primary = main blue
@@ -15,6 +20,13 @@
     dark = black bg
     sm = small botton
 --->
+
+<!--
+    display-{1-6}
+    1 = biggest
+    6 = smallest
+    display is larger than default size
+-->
 
 <!--
 bootstrap format
@@ -40,7 +52,7 @@ Use often
     mb-2 = margin bot 0.5rem
     ms-4 = margin left 1.5rem
     me-1 = margin right 0.25rem
-    
+
     mx-auto = center
     p-3 = padding all 1rem
     px-2 = padding left & right 0.5rem

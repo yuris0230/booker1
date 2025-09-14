@@ -66,6 +66,13 @@ main {
   text-align: left;
 }
 
+/* home */
+.home {
+  background: linear-gradient(135deg, #FF9A4B, #FF6F61);
+  color: #EEEEEE;
+  padding: 80px 20px;
+  border-radius: 12px;
+}
 /* responsive */
 @media screen and (max-width: 768px) {
   main {
