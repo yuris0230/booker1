@@ -4,7 +4,7 @@
 <!--- use bootstrap for start botton --->
 <%= link_to "Start", books_path, class: "btn btn-primary" %>
 <!---
-    btn btn-{syntax..}
+    btn btn-{syntax..} [bottons]
     primary = main blue
     secondary = sub grey
     success = confirmation/success green
@@ -13,4 +13,50 @@
     info = info light blue
     light = white bg
     dark = black bg
+    sm = small botton
 --->
+
+<!--
+bootstrap format
+    {property}{sides}{breakpoint}{size}
+    property = m{margin}, p{padding}
+sides
+    t = top
+    b = bottom
+    s = start {LTR so it means Left}
+    e = end {LTR so it means right}
+    x = left and reight
+    y = top and bot
+    if no input = all {tbse}
+size = 0-5(or auto)
+    0 = 0
+    1 = 0.25rem (~4px)
+    2 = 0.5rem (~8px)
+    3 = 1rem (~16px)
+    4 = 1.5rem (~24px)
+    5 = 3rem (~48px)
+Use often
+    mt-3 = margin top 1rem
+    mb-2 = margin bot 0.5rem
+    ms-4 = margin left 1.5rem
+    me-1 = margin right 0.25rem
+    
+    mx-auto = center
+    p-3 = padding all 1rem
+    px-2 = padding left & right 0.5rem
+    py-5 = padding top & bottom 3rem
+-->
+
+<!---
+    form-{syntax...}
+    label
+    control = full line <input>/<textarea>
+--->
+
+<%# Table with Bootstrap %>
+<%# thread or <th> = table header (column name) %>
+<%# tbody = rows body part %>
+<%# tr = table row 1 %>
+<%# th = table head cell %>
+<%# td = table data cell %>
+<%# table > thread > tr > th (title, body, action), tbody > tr > td (bottons) %>
