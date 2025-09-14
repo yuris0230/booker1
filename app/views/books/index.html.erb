@@ -36,4 +36,15 @@
   <div>
     <%= f.submit "Create Book" %>
   </div>
+
+  <% if @book.errors.any? %>
+    <div class="error_messages">
+      <h2><%= @book.errors.count %> 件のエラーがあります:</h2>
+        <ul>
+          <% @book.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+    </div>
+  <% end %>
 <% end %>

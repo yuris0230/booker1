@@ -18,8 +18,9 @@ class BooksController < ApplicationController
       flash[:notice] = "投稿に成功しました。" # flash message
       redirect_to book_path(@book.id) # if true -> book id
     else
+      @books = Book.all
       flash.now[:alert] = "投稿失敗しました。"
-      render :new # if false -> same form and need to do again
+      render :index # if false -> same form and need to do again
       # redirect_to new_book_path -> this is for redirect
     end
   end
