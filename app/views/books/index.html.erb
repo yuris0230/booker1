@@ -13,9 +13,20 @@
       <td><%= book.title %></td>
       <td><%= book.body %></td>
       <td>
-        <%= link_to "Show", book_path(book) %> |
-        <%= link_to "Edit", edit_book_path(book) %> |
-        <%= link_to "Delete", book_path(book), method: :delete, data: { confirm: "投稿を削除" } %>
+    <!---
+        btn btn-{syntax..}
+        primary = main blue
+        secondary = sub grey
+        success = confirmation/success green
+        danger = danger/delete red
+        warning = warning yellow
+        info = info light blue
+        light = white bg
+        dark = black bg
+    --->
+        <%= link_to "Show", book_path(book), class: "btn btn-primary" %> |
+        <%= link_to "Edit", edit_book_path(book), class: "btn btn-warning" %> |
+        <%= link_to "Delete", book_path(book), method: :delete, data: { confirm: "投稿を削除" }, class: "btn btn-danger" %>
       </td>
     </tr>
   <% end %>
@@ -24,10 +35,10 @@
 <h2>New book</h2>
 <%= form_with(model: @book, local: true) do |f| %>
   <div>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :title, class: "form-controll" %><br>
+    <%= f.text_field :title, "form-controll" %>
   </div>
-
+    <%# demo use text_area %>
   <div>
     <%= f.label :body %><br>
     <%= f.text_area :body %>
